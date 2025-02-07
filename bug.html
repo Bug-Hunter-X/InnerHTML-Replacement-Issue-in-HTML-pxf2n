@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to replace the entire div
+    document.getElementById("myDiv").innerHTML = "<p>This text replaces the div.</p>";
+
+    // The following line will fail to be executed because of the prior innerHTML replacement. 
+    //This happens because innerHTML replaces the entire content of the element, not just appending to it.
+    document.getElementById("myDiv").innerHTML += "<p>This text should be appended.</p>"; 
+  </script>
+</body>
+</html>
