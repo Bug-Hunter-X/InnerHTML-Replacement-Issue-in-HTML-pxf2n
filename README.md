@@ -1,0 +1,1 @@
+This repository demonstrates a common yet subtle error when using the innerHTML property in JavaScript within an HTML context.  The bug arises from a misunderstanding of how innerHTML replaces the entire content of an element, rather than appending to it. This can lead to unexpected behavior and broken functionality.
