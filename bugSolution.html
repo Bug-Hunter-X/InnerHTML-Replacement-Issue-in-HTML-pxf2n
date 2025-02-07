@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Correctly appending to the innerHTML using a temp variable to concatenate. 
+    let currentHTML = document.getElementById("myDiv").innerHTML; 
+    currentHTML += "<p>This text is appended.</p>";
+    document.getElementById("myDiv").innerHTML = currentHTML;
+  </script>
+</body>
+</html>
